@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: bulbul@gmail.com
+Date: Thu, 17 Nov 2022 18:51:10 -0000
+Message-ID: <166871107087.8916.2404221559475211556@DESKTOP-ERDHHQE>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/password_reset_confirm/MTA/bf26ba-4a2f0258361a8ec1c570c8b47978dbae/
+
+Your username, in case you’ve forgotten: bulbul
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

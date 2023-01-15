@@ -1,0 +1,56 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div class="position-sticky">
+          <div class="list-group list-group-flush mx-3 mt-4">
+            <a
+              href="{% url 'mobile' %}"
+              class="list-group-item list-group-item-action py-2 ripple active"
+              aria-current="true"
+            ><span>All Mobile</span>
+            </a>
+            <a href="{% url 'mobiledata' 'Gionee'%}" class="list-group-item list-group-item-action py-2 ripple">
+              <span>Gionee</span>
+            </a>
+            <a href="{% url 'mobiledata' 'Samsung' %}" class="list-group-item list-group-item-action py-2 ripple"
+              ><span>Samsung</span></a
+            >
+            <a href="{% url 'mobiledata' 'below' %}" class="list-group-item list-group-item-action py-2 ripple"
+              ><span>Below 15000</span></a
+            >
+            <a href="{% url 'mobiledata' 'above' %}" class="list-group-item list-group-item-action py-2 ripple">
+              <span>Above 15000</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- Sidebar -->
+  </div>
+  <div class="col-sm-8 offset-sm-1">
+    <div class="row">
+        <div class="col-sm-4 text-center mb4">
+    {%for m in mobile %}
+    <a href="{% url 'product-detail' m.id%}" class="btn">
+    <div class="item">
+      <img src="{{m.product_image.url}}" alt="" height="200px">
+    <div class="fw-bold">{{m.title}}</div>
+    <div class="fw-bold"><span class="fs-5">Rs. {{m.discount_price}}</span>
+    <small class="fw-light text-decoration-line-through">{{m.selling_price}}</small>
+    </div>
+    </div>
+</a>
+
+    {% endfor %}
+  </div>
+  
+ </div>
+</div>
+</div>
+</div>
+
+{% endblock main-content %}
